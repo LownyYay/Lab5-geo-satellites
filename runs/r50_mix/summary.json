@@ -1,0 +1,51 @@
+{
+ "run": "r50_mix",
+ "lr": 0.0002,
+ "head_lr_mult": 10,
+ "weight_decay": 0.01,
+ "label_smoothing": 0.1,
+ "warmup_epochs": 1,
+ "crop_scale": [
+  0.5,
+  1.0
+ ],
+ "corruption_p": 0.5,
+ "jitter": 0.3,
+ "dropout": 0.2,
+ "epochs": 30,
+ "batch": 32,
+ "test_offsets": [
+  0,
+  32,
+  64,
+  96
+ ],
+ "mix_p": 0.5,
+ "cutmix_alpha": 1.0,
+ "mixup_alpha": 0.4,
+ "arch": "resnet50",
+ "size": 256,
+ "seed": 42,
+ "holdout_train_min": 13.501842109362284,
+ "test_option": "320 px, TTA x8",
+ "test_sizes": [
+  320
+ ],
+ "val_acc_no_tta": 0.9656652360515021,
+ "val_acc": 0.9742489270386266,
+ "val_se": 0.005990927237065728,
+ "val_acc_clean": 0.9783889980353635,
+ "val_acc_degraded": 0.9631578947368421,
+ "full_train_min": 14.650360198815664,
+ "predict_min": 3.1706445733706157,
+ "versions": {
+  "python": "3.13.15",
+  "torch": "2.11.0+cu130",
+  "torchvision": "0.26.0+cu130",
+  "numpy": "2.1.3",
+  "pandas": "2.2.3",
+  "scikit-learn": "1.6.1",
+  "pillow": "11.3.0",
+  "gpu": "Tesla T4"
+ }
+}

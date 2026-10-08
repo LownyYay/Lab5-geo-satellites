@@ -1,0 +1,8 @@
+# Файлы больше 100 МБ GitHub не принимает.
+# Архив соревнования не нужен: те же данные лежат распакованными в data/.
+week-5-competition-geo-satellites-classification.zip
+# Веса моделей хранятся на Google Drive в MyDrive/lab5_runs/<модель>/.
+*.pt
+
+__pycache__/
+.ipynb_checkpoints/
