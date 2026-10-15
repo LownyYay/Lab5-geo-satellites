@@ -1,0 +1,7 @@
+file,models,hardware,train_min_total_T4,per_gpu_min,val_errors,val_err_clean,val_err_degraded,diff_vs_A,diff_vs_7,diff_vs_r50r101,why
+A_2gpu_r50_r101_r152_inc3.csv,r50 + r101 + r152 + inc3,2xT4,59.5,GPU0 r50+r152 31.4 | GPU1 r101+inc3 28.1,15,8,7,0,50,66,reference = the 4-model ensemble already on the LB (0.96678); main plan reproduces it
+B_2gpu_r50_r101_r152_inc3-363.csv,r50 + r101 + r152 + inc3_363,2xT4,65.1,GPU0 r50+r152 31.4 | GPU1 r101+inc3_363 33.7,13,7,6,40,46,64,A with inc3 replaced by Inception trained at 363 px
+C_2gpu_r50_r152_inc3_inc3-363.csv,r50 + r152 + inc3 + inc3_363,2xT4,62.7,GPU0 r50+r152 31.4 | GPU1 inc3+inc3_363 31.3,13,7,6,55,43,96,2 ResNets + 2 Inceptions (Res-Inc pairs disagree most on test)
+S1_1gpu_r50_inc3.csv,r50 + inc3,1xT4,22.9,22.9,17,11,6,83,79,98,cheapest ResNet + Inception pair (~23 min)
+S2_1gpu_r50_inc3-363.csv,r50 + inc3_363,1xT4,28.5,28.5,14,8,6,103,81,117,ResNet-50 + Inception 363 (~29 min)
+S3_1gpu_r50_r101_inc3.csv,r50 + r101 + inc3,1xT4,38.1,38.1,19,12,7,51,55,55,single-GPU backup plan (in the plan trained 16 epochs; here 20-epoch probs)

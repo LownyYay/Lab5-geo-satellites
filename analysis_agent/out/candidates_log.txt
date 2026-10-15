@@ -1,0 +1,10 @@
+﻿                             file                       models hardware  train_min_total_T4                                  per_gpu_min  val_errors  val_err_clean  val_err_degraded  diff_vs_A  diff_vs_7  diff_vs_r50r101
+    A_2gpu_r50_r101_r152_inc3.csv     r50 + r101 + r152 + inc3     2xT4                59.5     GPU0 r50+r152 31.4 | GPU1 r101+inc3 28.1          15              8                 7          0         50               66
+B_2gpu_r50_r101_r152_inc3-363.csv r50 + r101 + r152 + inc3_363     2xT4                65.1 GPU0 r50+r152 31.4 | GPU1 r101+inc3_363 33.7          13              7                 6         40         46               64
+C_2gpu_r50_r152_inc3_inc3-363.csv r50 + r152 + inc3 + inc3_363     2xT4                62.7 GPU0 r50+r152 31.4 | GPU1 inc3+inc3_363 31.3          13              7                 6         55         43               96
+             S1_1gpu_r50_inc3.csv                   r50 + inc3     1xT4                22.9                                         22.9          17             11                 6         83         79               98
+         S2_1gpu_r50_inc3-363.csv               r50 + inc3_363     1xT4                28.5                                         28.5          14              8                 6        103         81              117
+        S3_1gpu_r50_r101_inc3.csv            r50 + r101 + inc3     1xT4                38.1                                         38.1          19             12                 7         51         55               55
+
+A vs runs/submission_ensemble_inc3_r101_r152_r50.csv: 100.0000% identical labels
+known public: {'A': 0.96678, '7': 0.96678, 'r50+r101': 0.96506} | differing labels between the known ones: A vs 7: 50  A vs r50+r101: 66
